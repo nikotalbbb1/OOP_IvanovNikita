@@ -11,7 +11,14 @@ namespace OOP_IvanovNikita
 
         public void Tervita()
         {
-            Console.WriteLine($"Tere! Mina olen {Nimi} ja ma olen {Vanus} aastat vana, olen sündinud {Sünniaasta}.");
+            if (sünniaasta == 0)
+            {
+                Console.WriteLine("viga");
+            }
+            else
+            {
+              Console.WriteLine($"Tere! Mina olen {Nimi} ja ma olen {Vanus} aastat vana, olen sündinud {Sünniaasta}.");
+            }
         }
         // Privaatne väli - otse ligi ei saa
         private int sünniaasta;
@@ -33,6 +40,6 @@ namespace OOP_IvanovNikita
         }
 
         // Arvutatud omadus (ainult lugemiseks / getter)
-        public int Vanus => DateTime.Now.Year - sünniaasta;
+        public int Vanus =>sünniaasta==0 ? 0: DateTime.Now.Year - sünniaasta;
     }
 }
