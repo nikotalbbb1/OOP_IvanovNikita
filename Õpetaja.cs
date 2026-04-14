@@ -12,5 +12,9 @@ namespace OOP_IvanovNikita
         {
             Console.WriteLine($"{Nimi} õpetab ainet: {Aine}.");
         }
+        public override void Kirjelda()
+        {
+            Console.WriteLine($"Mina olen õpetaja {Nimi} ja ma õpetan: {Aine}.");
+        }
     }
 }

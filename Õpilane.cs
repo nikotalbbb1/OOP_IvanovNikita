@@ -13,5 +13,9 @@ namespace OOP_IvanovNikita
         {
             Console.WriteLine($"{Nimi} õpib {Kool} {Klass}. klassis.");
         }
+        public override void Kirjelda()
+        {
+            Console.WriteLine($"Mina olen õpilane {Nimi} ja käin {Klass}. klassis.");
+        }
     }
 }

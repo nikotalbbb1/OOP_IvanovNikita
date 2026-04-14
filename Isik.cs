@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_IvanovNikita
 {
-    public class Isik
+    public abstract class Isik
     {
         //public string Nimi;
         //public int Vanus;
@@ -41,5 +41,8 @@ namespace OOP_IvanovNikita
 
         // Arvutatud omadus (ainult lugemiseks / getter)
         public int Vanus =>sünniaasta==0 ? 0: DateTime.Now.Year - sünniaasta;
+
+        // Abstraktne meetod – sisu puudub, alamklassid PEAVAD selle ise looma
+        public abstract void Kirjelda();
     }
 }
