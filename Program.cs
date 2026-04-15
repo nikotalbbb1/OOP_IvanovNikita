@@ -29,7 +29,7 @@ public class Start()
         õpilane.Puudumised = 30;
         õpilane.KeskmineHinne = 3.9;
         õpilane.KasOnSotsTõend = false;
-        õpilane.Staatus = Õppevorm.AkadeemilinePuhkus;
+        õpilane.Staatus = Õppevorm.Päevane;
         Console.WriteLine($"Summa: {õpilane.ArvutaPalk()}");
 
         õpilane.Õpi();
@@ -69,6 +69,7 @@ public class Start()
         Koolihaldus minuKool = new Koolihaldus();
 
         Õpetaja op = new Õpetaja { Nimi = "Mati", Aine = "Programmeerimine" };
+        Õpetaja op2 = new Õpetaja { Nimi = "Kati", Aine = "Programmeerimine" };
         Õpilane opilane1 = new Õpilane { Nimi = "Mari", Klass = 10, Staatus = Õppevorm.Päevane };
         Õpilane opilane2 = new Õpilane { Nimi = "Juri", Klass = 11, Staatus = Õppevorm.Kaugõpe };
         Õpilane opilane3 = new Õpilane { Nimi = "Kati", Klass = 10, Staatus = Õppevorm.Ekstern };
@@ -76,6 +77,7 @@ public class Start()
         Õpilane opilane4= new Õpilane { Nimi = "Anna", Klass = 10, Staatus = Õppevorm.Päevane };
 
         minuKool.LisaInimene(op);
+        minuKool.LisaInimene(op2);
         minuKool.LisaInimene(opilane1);
         minuKool.LisaInimene(opilane2);
         minuKool.LisaInimene(opilane3);
