@@ -9,7 +9,19 @@ public class Start()
         inimene1.Nimi = "Mati";
         inimene1.Sünniaasta = 2000;
         inimene1.Tervita();
-        
+
+
+        string[] hinne = { "1", "2", "3", "4", "5" };
+
+        Direktor direktor = new Direktor();
+        direktor.Nimi = "Direktor";
+        direktor.Lisatasu = 20;
+        direktor.Tunnidkuus = 20;
+        direktor.Tunnitasu = 20;
+        direktor.ArvutaPalk();
+        Console.WriteLine($"Tasu: {direktor.ArvutaPalk()}");
+
+        Random rnd2 = new Random();
 
         Õpetaja õpetaja = new Õpetaja();
         õpetaja.Nimi = "Nimi";
@@ -17,6 +29,7 @@ public class Start()
         õpetaja.Sünniaasta = 1980;
         õpetaja.Tunnidkuus = 20;
         õpetaja.Tunnitasu = 7;
+        õpetaja.Hinda(hinne[rnd2.Next(1,5)]);
         õpetaja.Õpeta();
         õpetaja.Kirjelda();
         õpetaja.ArvutaPalk();
@@ -64,6 +77,9 @@ public class Start()
             //string tüüp = isik.Tüüp.ToString();
             Console.WriteLine($"Väljamakse summa: {isik.ArvutaPalk()} eurot. {((Isik)isik).Nimi}le");
         }
+        Üliõpilane üliõpilane = new Üliõpilane();
+        Üliõpilane ül = new Üliõpilane { Nimi = "Nimi", Kursus = 1, Eriala = "Tarkvaraarendaja", Staatus = Õppevorm.Päevane };
+        
 
 
         Koolihaldus minuKool = new Koolihaldus();
@@ -76,6 +92,8 @@ public class Start()
         Õpilane opilane5 = new Õpilane { Nimi = "Juhan", Klass = 12, Staatus = Õppevorm.AkadeemilinePuhkus };
         Õpilane opilane4= new Õpilane { Nimi = "Anna", Klass = 10, Staatus = Õppevorm.Päevane };
 
+
+        
         minuKool.LisaInimene(op);
         minuKool.LisaInimene(op2);
         minuKool.LisaInimene(opilane1);
@@ -83,7 +101,11 @@ public class Start()
         minuKool.LisaInimene(opilane3);
         minuKool.LisaInimene(opilane4);
         minuKool.LisaInimene(opilane5);
+        
+        minuKool.LisaInimene(ül);
 
         minuKool.KuvaKõik();
+
+        minuKool.OtsiNimeJärgi("Mati");
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OOP_IvanovNikita
 {
-    public class Õpetaja : Isik, ITööline
+    public  class Õpetaja : Isik, ITööline, IHindaja
     {
         public string Aine { get; set; }
 
@@ -26,6 +26,10 @@ namespace OOP_IvanovNikita
         public double ArvutaPalk()
         {
             return Tunnitasu * Tunnidkuus;
+        }
+        public void Hinda(string hinne)
+        {
+            Console.WriteLine(hinne);
         }
     }
 }

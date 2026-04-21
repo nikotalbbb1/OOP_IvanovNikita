@@ -24,5 +24,15 @@ namespace OOP_IvanovNikita
                 isik.Kirjelda();
             }
         }
+        public void OtsiNimeJärgi(string otsitavNimi)
+        {
+            foreach (var isik in inimesed)
+            {
+                if (otsitavNimi == isik.Nimi)
+                {
+                    isik.Kirjelda();
+                }
+            }
+        }
     }
 }
