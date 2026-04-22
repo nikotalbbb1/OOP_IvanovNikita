@@ -45,6 +45,10 @@ public class Start()
         õpilane.Staatus = Õppevorm.Päevane;
         Console.WriteLine($"Summa: {õpilane.ArvutaPalk()}");
 
+        Õpilane uusÕpilane = new Õpilane("Nikita", "TTHK", 1);
+
+        
+
         õpilane.Õpi();
 
         õpilane.Kirjelda();
@@ -92,8 +96,10 @@ public class Start()
         Õpilane opilane5 = new Õpilane { Nimi = "Juhan", Klass = 12, Staatus = Õppevorm.AkadeemilinePuhkus };
         Õpilane opilane4= new Õpilane { Nimi = "Anna", Klass = 10, Staatus = Õppevorm.Päevane };
 
+        Õpetaja uusÕpetaja = new Õpetaja("Bob", "Matemaatika", 13);
 
-        
+
+        minuKool.LisaInimene(uusÕpilane);
         minuKool.LisaInimene(op);
         minuKool.LisaInimene(op2);
         minuKool.LisaInimene(opilane1);
@@ -101,7 +107,9 @@ public class Start()
         minuKool.LisaInimene(opilane3);
         minuKool.LisaInimene(opilane4);
         minuKool.LisaInimene(opilane5);
-        
+
+        minuKool.LisaInimene(uusÕpetaja);
+
         minuKool.LisaInimene(ül);
 
         minuKool.KuvaKõik();

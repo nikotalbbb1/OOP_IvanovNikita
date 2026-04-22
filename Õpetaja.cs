@@ -12,6 +12,19 @@ namespace OOP_IvanovNikita
 
         public int Tunnidkuus { get; set; }
 
+        public Õpetaja() : base()
+        {
+
+        }
+
+        public Õpetaja(string nimi, string aine, int tunnitasu) : base(nimi)
+        {
+            Nimi = nimi;
+            Aine = aine;
+            Tunnitasu = tunnitasu;
+        }
+
+
         //public TööTüüp VäljamakseTüüp { get; set; } = TööTüüp.Palk;
 
         public void Õpeta()

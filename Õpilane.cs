@@ -18,6 +18,19 @@ namespace OOP_IvanovNikita
 
         public Õppevorm Staatus { get; set; }
 
+        public Õpilane() : base()
+        {
+
+        }
+
+        public Õpilane(string nimi, string kool, int klass) : base(nimi)
+        {
+            Nimi = nimi;
+            Kool = kool;
+            Klass = klass;
+        }
+
+
         //public TööTüüp VäljamakseTüüp { get; set; } = TööTüüp.Toetus;
 
         public void Õpi()

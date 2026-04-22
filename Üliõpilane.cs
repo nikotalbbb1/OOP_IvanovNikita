@@ -14,7 +14,7 @@ namespace OOP_IvanovNikita
 
         public override void Kirjelda()
         {
-            Console.WriteLine($"{Nimi} õpib {Eriala}s. {Kursus} kursusel  Vorm: {Staatus}");
+            Console.WriteLine($"{Nimi} õpib {Eriala}s {Kursus} kursusel  Vorm: {Staatus}");
         }
     }
 }

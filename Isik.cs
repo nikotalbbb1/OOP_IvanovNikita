@@ -20,6 +20,17 @@ namespace OOP_IvanovNikita
               Console.WriteLine($"Tere! Mina olen {Nimi} ja ma olen {Vanus} aastat vana, olen sündinud {Sünniaasta}.");
             }
         }
+
+        public Isik()
+        {
+
+        }
+
+        public Isik(string nimi)
+        {
+            Nimi = nimi;
+        }
+
         // Privaatne väli - otse ligi ei saa
         private int sünniaasta;
 
