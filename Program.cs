@@ -1,4 +1,5 @@
 ﻿using OOP_IvanovNikita;
+using System;
 
 public class Start()
 {
@@ -9,6 +10,8 @@ public class Start()
         inimene1.Nimi = "Mati";
         inimene1.Sünniaasta = 2000;
         inimene1.Tervita();
+
+        List<Isik> Uudinimesed = new List<Isik>();
 
 
         string[] hinne = { "1", "2", "3", "4", "5" };
@@ -46,8 +49,8 @@ public class Start()
         Console.WriteLine($"Summa: {õpilane.ArvutaPalk()}");
 
         Õpilane uusÕpilane = new Õpilane("Nikita", "TTHK", 1);
-
         
+
 
         õpilane.Õpi();
 
@@ -97,8 +100,9 @@ public class Start()
         Õpilane opilane4= new Õpilane { Nimi = "Anna", Klass = 10, Staatus = Õppevorm.Päevane };
 
         Õpetaja uusÕpetaja = new Õpetaja("Bob", "Matemaatika", 13);
-
-
+        
+        
+        
         minuKool.LisaInimene(uusÕpilane);
         minuKool.LisaInimene(op);
         minuKool.LisaInimene(op2);
@@ -107,13 +111,20 @@ public class Start()
         minuKool.LisaInimene(opilane3);
         minuKool.LisaInimene(opilane4);
         minuKool.LisaInimene(opilane5);
-
+        minuKool.LisaInimene(õpilane);
         minuKool.LisaInimene(uusÕpetaja);
 
         minuKool.LisaInimene(ül);
-
+        
         minuKool.KuvaKõik();
-
+        Õpilane juku = new Õpilane("Juku", "TTHK", 9);
+        Õpetaja mati = new Õpetaja("Mati", "Füüsika", 15);
+        Console.WriteLine($"Koolis on hetkel süsteemis registreeritud {Isik.InimesteKoguarv} isikut.");
         minuKool.OtsiNimeJärgi("Mati");
+
+        minuKool.Otsi(2009);
+
+        minuKool.SalvestaFaili("Fail");
+        
     }
 }

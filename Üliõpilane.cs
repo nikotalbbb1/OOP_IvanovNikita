@@ -12,9 +12,9 @@ namespace OOP_IvanovNikita
 
         public Õppevorm Staatus { get; set; }
 
-        public override void Kirjelda()
+        public override string Kirjelda()
         {
-            Console.WriteLine($"{Nimi} õpib {Eriala}s {Kursus} kursusel  Vorm: {Staatus}");
+            return $"{Nimi} õpib {Eriala}s {Kursus} kursusel  Vorm: {Staatus}";
         }
     }
 }

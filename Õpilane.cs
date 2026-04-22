@@ -37,9 +37,9 @@ namespace OOP_IvanovNikita
         {
             Console.WriteLine($"{Nimi} õpib {Kool} {Klass}. klassis.");
         }
-        public override void Kirjelda()
+        public override string Kirjelda()
         {
-            Console.WriteLine($"{Nimi} õpib {Klass}. klassis. Vorm: {Staatus}");
+            return $"{Nimi} õpib {Klass}. klassis. Vorm: {Staatus}";
         }
 
         public double ArvutaPalk()

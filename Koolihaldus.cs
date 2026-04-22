@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,6 +9,17 @@ namespace OOP_IvanovNikita
     {
         // Kapseldatud list
         private List<Isik> inimesed = new List<Isik>();
+
+
+
+        public void LisaInimene2(List<Isik> uuedInimesed)
+        {
+            inimesed.AddRange(uuedInimesed);
+            foreach (var isik in inimesed)
+            {
+                Console.WriteLine($"{uuedInimesed}");
+            }
+        }
 
         public void LisaInimene(Isik isik)
         {
@@ -32,6 +44,35 @@ namespace OOP_IvanovNikita
                 {
                     isik.Kirjelda();
                 }
+            }
+        }
+        public void Otsi(int sünniaasta)
+        {
+            Console.WriteLine($"\nOtsime kedagi, kes on sündinud aastal: {sünniaasta}");
+            // Siin eeldame, et lisasime Isik klassile ka Sünniaasta tagasi
+            foreach (var isik in inimesed)
+            {
+                if (sünniaasta == isik.Sünniaasta)
+                {
+                    isik.Kirjelda();
+                }
+            }
+        }
+        public void SalvestaFaili(string failinimi)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(failinimi))
+                {
+                    foreach (Isik isik in inimesed)
+                    {
+                        writer.WriteLine(isik.Kirjelda());
+                    }
+                }
+            }
+            catch (IOException ex)
+            {
+                Console.WriteLine("Viga faili kirjutamisel: " + ex.Message);
             }
         }
     }

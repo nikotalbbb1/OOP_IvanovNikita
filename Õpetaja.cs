@@ -31,9 +31,9 @@ namespace OOP_IvanovNikita
         {
             Console.WriteLine($"{Nimi} õpetab ainet: {Aine}.");
         }
-        public override void Kirjelda()
+        public override string Kirjelda()
         {
-            Console.WriteLine($"Mina olen õpetaja {Nimi} ja ma õpetan: {Aine}.");
+            return $"Mina olen õpetaja {Nimi} ja ma õpetan: {Aine}.";
         }
 
         public double ArvutaPalk()

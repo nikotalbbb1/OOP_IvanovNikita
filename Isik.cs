@@ -9,6 +9,8 @@ namespace OOP_IvanovNikita
         //public string Nimi;
         //public int Vanus;
 
+        public static int InimesteKoguarv = 0;
+
         public void Tervita()
         {
             if (sünniaasta == 0)
@@ -29,7 +31,9 @@ namespace OOP_IvanovNikita
         public Isik(string nimi)
         {
             Nimi = nimi;
+            InimesteKoguarv++;
         }
+        public abstract string Kirjelda();
 
         // Privaatne väli - otse ligi ei saa
         private int sünniaasta;
@@ -54,6 +58,6 @@ namespace OOP_IvanovNikita
         public int Vanus =>sünniaasta==0 ? 0: DateTime.Now.Year - sünniaasta;
 
         // Abstraktne meetod – sisu puudub, alamklassid PEAVAD selle ise looma
-        public abstract void Kirjelda();
+        
     }
 }
